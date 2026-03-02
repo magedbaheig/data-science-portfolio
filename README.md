@@ -121,8 +121,9 @@ This self-directed portfolio complements **10+ years of corporate experience** i
 
 ## 📫 Contact
 
-- **LinkedIn:** [linkedin.com/in/YOUR-LINKEDIN](https://www.linkedin.com/in/magedbaheig/)
-- **Email:** magedbaheig@gmail.com
+- **LinkedIn:** [https://www.linkedin.com/in/magedbaheig](https://www.linkedin.com/in/magedbaheig)
+- **GitHub:** [https://github.com/Maged-Baheig](https://github.com/Maged-Baheig)
+- **Email:** [magedbaheig@gmail.com](mailto:magedbaheig@gmail.com)
 - **Location:** Cairo, Egypt
 
 ---
@@ -134,6 +135,7 @@ I'm open to:
 - 🔬 Data Science Manager roles
 - 🎯 CX Analytics / Insights Manager roles
 - 💻 Freelance data science projects
+- 🎯 Freelance Data Analytics/Data Science Training
 
 ---
 
