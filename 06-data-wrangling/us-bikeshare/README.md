@@ -65,83 +65,138 @@ Build an **interactive command-line tool** that allows users to explore US bikes
 ## 🚀 How to Run
 
 ### Prerequisites
-```bash
-pip install pandas
-Run the Program
-Bash
 
-python bikeshare.py
-Required Data Files
+| Package | Installation |
+|---------|--------------|
+| pandas | `pip install pandas` |
+
+### Run the Program
+
+| Command | Description |
+|---------|-------------|
+| `python bikeshare.py` | Run the interactive explorer |
+
+### Required Data Files
+
 Place these CSV files in the same directory as bikeshare.py:
 
-chicago.csv
-new_york_city.csv
-washington.csv
-Note: Data files are not included in this repository due to size. They were provided as part of the Udacity nanodegree.
+| File | City |
+|------|------|
+| chicago.csv | Chicago |
+| new_york_city.csv | New York |
+| washington.csv | Washington |
 
-📁 Project Structure
-text
+> **Note:** Data files are not included in this repository due to size. They were provided as part of the Udacity nanodegree.
 
-us-bikeshare/
-├── README.md           # This file
-├── bikeshare.py        # Main Python script
-└── requirements.txt    # Dependencies
-🔧 Technical Implementation
-Core Functions
-Function	Purpose
-get_filters()	Collect and validate user input for city, month, day
-load_data()	Load and filter data based on user selections
-summary_stats()	Display dataset overview and descriptive statistics
-time_stats()	Compute most frequent times of travel
-station_stats()	Find most popular stations and trips
-trip_duration_stats()	Calculate total and average trip duration
-user_stats()	Analyze user demographics
-display_rawdata()	Show raw data in chunks of 5 rows
-restart()	Handle program restart or exit
-Data Processing
-Python
+---
 
-# Key transformations performed:
-df['Start Time'] = pd.to_datetime(df['Start Time'])
-df['Start Month'] = df['Start Time'].dt.strftime("%b")
-df['Start Day'] = df['Start Time'].dt.strftime("%a")
-df['Start Hour'] = df['Start Time'].dt.hour
-df['Trip'] = df['Start Station'] + " -TO-> " + df['End Station']
-📊 Sample Output
-text
+## 📁 Project Structure
 
-╔════════════════════════════════════════════════════════════════╗
-║  Statistics on the most frequent times of travel               ║
-╚════════════════════════════════════════════════════════════════╝
+| File | Description |
+|------|-------------|
+| README.md | This documentation file |
+| bikeshare.py | Main Python script |
+| requirements.txt | Python dependencies |
 
-Most Popular month: Jun
-Most Popular day: Wed
-Most Popular Start Hour: 5 PM
+---
 
-🕘 This statistics calc took 0.12 seconds.
-🛠️ Tools & Technologies
-Tool	Purpose
-Python 3.x	Programming language
-Pandas	Data manipulation and analysis
-sys	System-specific parameters and functions
-time	Time-related functions
-📚 Skills Demonstrated
-✅ Python Scripting – Modular function design, main() structure
-✅ Data Wrangling – DateTime parsing, column creation, filtering
-✅ Pandas Proficiency – read_csv, value_counts, mode, groupby operations
-✅ User Experience Design – Interactive CLI with clear prompts
-✅ Error Handling – Try-except blocks, input validation
-✅ Code Documentation – Comprehensive comments and docstrings
-🔗 Related Projects
-Twitter WeRateDogs Wrangling – API data extraction and cleaning
-Main Portfolio – Full data science project collection
-📜 Acknowledgments
-Udacity – For the excellent Data Analysis Professional Nanodegree
-Motivate – For providing the bikeshare datasets
-FWD (Egypt) – For sponsoring the scholarship
-👤 Author
-Maged Baheig
+## 🔧 Technical Implementation
 
-LinkedIn: https://www.linkedin.com/in/magedbaheig
-GitHub: https://github.com/Maged-Baheig
-Email: magedbaheig@gmail.com
+### Core Functions
+
+| Function | Purpose |
+|----------|---------|
+| `get_filters()` | Collect and validate user input for city, month, day |
+| `load_data()` | Load and filter data based on user selections |
+| `summary_stats()` | Display dataset overview and descriptive statistics |
+| `time_stats()` | Compute most frequent times of travel |
+| `station_stats()` | Find most popular stations and trips |
+| `trip_duration_stats()` | Calculate total and average trip duration |
+| `user_stats()` | Analyze user demographics |
+| `display_rawdata()` | Show raw data in chunks of 5 rows |
+| `restart()` | Handle program restart or exit |
+
+### Data Processing
+
+Key transformations performed:
+
+| Transformation | Code |
+|----------------|------|
+| Parse datetime | `df['Start Time'] = pd.to_datetime(df['Start Time'])` |
+| Extract month | `df['Start Month'] = df['Start Time'].dt.strftime("%b")` |
+| Extract day | `df['Start Day'] = df['Start Time'].dt.strftime("%a")` |
+| Extract hour | `df['Start Hour'] = df['Start Time'].dt.hour` |
+| Create trip | `df['Trip'] = df['Start Station'] + " -TO-> " + df['End Station']` |
+
+---
+
+## 📊 Sample Output
+
+| Section | Example Output |
+|---------|----------------|
+| Most Popular Month | Jun |
+| Most Popular Day | Wed |
+| Most Popular Start Hour | 5 PM |
+| Calculation Time | 0.12 seconds |
+
+---
+
+## 🛠️ Tools & Technologies
+
+| Tool | Purpose |
+|------|---------|
+| **Python 3.x** | Programming language |
+| **Pandas** | Data manipulation and analysis |
+| **sys** | System-specific parameters and functions |
+| **time** | Time-related functions |
+
+---
+
+## 📚 Skills Demonstrated
+
+| Skill | Details |
+|-------|---------|
+| ✅ Python Scripting | Modular function design, main() structure |
+| ✅ Data Wrangling | DateTime parsing, column creation, filtering |
+| ✅ Pandas Proficiency | read_csv, value_counts, mode, groupby operations |
+| ✅ User Experience Design | Interactive CLI with clear prompts |
+| ✅ Error Handling | Try-except blocks, input validation |
+| ✅ Code Documentation | Comprehensive comments and docstrings |
+
+---
+
+## 🔗 Related Projects
+
+| Project | Type | Link |
+|---------|------|------|
+| Twitter WeRateDogs | Data Wrangling | [Link](../twitter-weratedogs/) |
+| Main Portfolio | All Projects | [Link](../../) |
+
+---
+
+## 📜 Acknowledgments
+
+| Entity | Contribution |
+|--------|--------------|
+| **Udacity** | Data Analysis Professional Nanodegree |
+| **Motivate** | Bikeshare datasets |
+| **FWD (Egypt)** | Scholarship sponsorship |
+
+---
+
+## 👤 Author
+
+**Maged Baheig**
+
+| Platform | Link |
+|----------|------|
+| LinkedIn | [Connect](https://www.linkedin.com/in/magedbaheig) |
+| Kaggle | [Profile](https://www.kaggle.com/magedbaheig) |
+| GitHub | [Follow](https://github.com/Maged-Baheig) |
+| Email | [Reach Out](mailto:magedbaheig@gmail.com) |
+
+📍 **Location:** Cairo, Egypt
+
+---
+
+*Part of the [Data Science Portfolio](../../)*
