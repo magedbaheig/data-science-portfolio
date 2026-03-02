@@ -2,7 +2,8 @@
 
 **Maged Baheig | Independent Practitioner | 2020–2021**
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/magedbaheig/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/magedbaheig)
+[![Kaggle](https://img.shields.io/badge/Kaggle-Profile-blue)](https://www.kaggle.com/magedbaheig)
 [![Email](https://img.shields.io/badge/Email-Contact-red)](mailto:magedbaheig@gmail.com)
 
 ---
@@ -17,7 +18,7 @@ This portfolio contains **12 end-to-end data science projects** demonstrating ha
 - 🧪 **A/B Testing & Experimentation**
 - 🔧 **Data Wrangling & Engineering**
 
-**🏆 Highlight:** Kaggle Top 30% ranking in Insurance Prediction challenge (500K records)
+**🏆 Highlight:** Kaggle Top 30% ranking in Insurance Prediction challenge (8,040 participants, 500K records)
 
 ---
 
@@ -27,7 +28,7 @@ This portfolio contains **12 end-to-end data science projects** demonstrating ha
 |--------|-------|
 | Total Projects | 12 end-to-end |
 | Total Records Processed | 500K+ |
-| Kaggle Ranking | **Top 30%** (Insurance Prediction) |
+| Kaggle Ranking | **Top 30%** (8,040 participants) |
 | ML Disciplines | 6 |
 | Tool Stacks | 4 (Python, Alteryx, Tableau, Excel) |
 
@@ -39,7 +40,7 @@ This portfolio contains **12 end-to-end data science projects** demonstrating ha
 
 | Project | Techniques | Scale | Results |
 |---------|------------|-------|---------|
-| [Insurance Claims (Kaggle)](./01-regression/kaggle-insurance-prediction/) | XGBoost, LightGBM | 300K train / 200K test | **Top 30%** |
+| [Insurance Claims (Kaggle)](./01-regression/kaggle-insurance-prediction/) | XGBoost, LightGBM | 300K train / 200K test | **Top 30%**, RMSE 0.725 |
 | [Diamond Pricing](./01-regression/diamond-pricing/) | Linear Regression | 5K records | Price prediction |
 | [Catalog Demand](./01-regression/catalog-demand/) | Linear Regression | 2.3K records | Profit estimation |
 | [School Cost](./01-regression/school-cost-prediction/) | Data Prep + Regression | Messy dataset | Clean dataset |
@@ -81,30 +82,20 @@ This portfolio contains **12 end-to-end data science projects** demonstrating ha
 
 ## 🛠️ Tech Stack
 
-**Programming:**
-Python (Pandas, NumPy, scikit-learn, XGBoost, LightGBM, Matplotlib, Seaborn)
-
-text
-
-
-**Tools:**
-Alteryx • Tableau • Jupyter Notebook • Excel
-
-text
-
-
-**Methods:**
-Regression • Classification • Clustering • PCA • Time Series (ETS/ARIMA) • A/B Testing
-
-text
-
+| Category | Technologies |
+|----------|--------------|
+| **Programming** | Python (Pandas, NumPy, scikit-learn, XGBoost, LightGBM, Matplotlib, Seaborn) |
+| **Tools** | Alteryx, Tableau, Jupyter Notebook, Excel |
+| **Methods** | Regression, Classification, Clustering, PCA, Time Series (ETS/ARIMA), A/B Testing |
 
 ---
 
 ## 📜 Certifications
 
-- 🎓 **Udacity Data Analysis Professional Nanodegree** (FWD)
-- 🎓 **Udacity Predictive Analytics for Business Nanodegree** (Bertelsmann)
+| Certification | Provider |
+|---------------|----------|
+| Data Analysis Professional Nanodegree | Udacity (FWD) |
+| Predictive Analytics for Business Nanodegree | Udacity (Bertelsmann) |
 
 ---
 
@@ -112,20 +103,27 @@ text
 
 This self-directed portfolio complements **10+ years of corporate experience** in CX Analytics at Telecom Egypt, where I've applied these techniques to:
 
-- Customer segmentation (22M+ customers)
-- Churn prediction (74%+ recall)
-- CX driver analysis (R² 0.45–0.99)
-- Executive dashboards (30+ dashboards, 100+ KPIs)
+| Application | Scale |
+|-------------|-------|
+| Customer segmentation | 22M+ customers |
+| Churn prediction | 74%+ recall |
+| CX driver analysis | R² 0.45–0.99 |
+| Executive dashboards | 30+ dashboards, 100+ KPIs |
 
 ---
 
-## 📫 Contact
+## 👤 Author
 
-- **LinkedIn:** [https://www.linkedin.com/in/magedbaheig](https://www.linkedin.com/in/magedbaheig)
-- **Email:** [magedbaheig@gmail.com](mailto:magedbaheig@gmail.com)
-- **GitHub:** [https://github.com/Maged-Baheig](https://github.com/Maged-Baheig)
-- **Kaggle:** [https://www.kaggle.com/magedbaheig](https://www.kaggle.com/magedbaheig)
-- **Location:** Cairo, Egypt
+**Maged Baheig**
+
+| Platform | Link |
+|----------|------|
+| LinkedIn | [Connect](https://www.linkedin.com/in/magedbaheig) |
+| Kaggle | [Profile](https://www.kaggle.com/magedbaheig) |
+| GitHub | [Follow](https://github.com/Maged-Baheig) |
+| Email | [Reach Out](mailto:magedbaheig@gmail.com) |
+
+📍 **Location:** Cairo, Egypt
 
 ---
 
@@ -135,8 +133,8 @@ I'm open to:
 - 📊 Data Analytics Manager roles
 - 🔬 Data Science Manager roles
 - 🎯 CX Analytics / Insights Manager roles
-- 💻 Freelance data science projects
-- 🎯 Freelance Data Analytics/Data Science Training
+- 💻 Freelance Data Science & Analytics projects
+- 🎓 Freelance Data Analytics & Data Science Training
 
 ---
 
