@@ -2,8 +2,8 @@
 
 **Maged Baheig | Independent Practitioner | 2020–2021**
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/YOUR-LINKEDIN/)
-[![Email](https://img.shields.io/badge/Email-Contact-red)](mailto:YOUR-EMAIL@email.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/magedbaheig/)
+[![Email](https://img.shields.io/badge/Email-Contact-red)](mailto:magedbaheig@gmail.com)
 
 ---
 
@@ -82,3 +82,59 @@ This portfolio contains **12 end-to-end data science projects** demonstrating ha
 ## 🛠️ Tech Stack
 
 **Programming:**
+Python (Pandas, NumPy, scikit-learn, XGBoost, LightGBM, Matplotlib, Seaborn)
+
+text
+
+
+**Tools:**
+Alteryx • Tableau • Jupyter Notebook • Excel
+
+text
+
+
+**Methods:**
+Regression • Classification • Clustering • PCA • Time Series (ETS/ARIMA) • A/B Testing
+
+text
+
+
+---
+
+## 📜 Certifications
+
+- 🎓 **Udacity Data Analysis Professional Nanodegree** (FWD)
+- 🎓 **Udacity Predictive Analytics for Business Nanodegree** (Bertelsmann)
+
+---
+
+## 💼 Professional Background
+
+This self-directed portfolio complements **10+ years of corporate experience** in CX Analytics at Telecom Egypt, where I've applied these techniques to:
+
+- Customer segmentation (22M+ customers)
+- Churn prediction (74%+ recall)
+- CX driver analysis (R² 0.45–0.99)
+- Executive dashboards (30+ dashboards, 100+ KPIs)
+
+---
+
+## 📫 Contact
+
+- **LinkedIn:** [linkedin.com/in/YOUR-LINKEDIN](https://www.linkedin.com/in/magedbaheig/)
+- **Email:** magedbaheig@gmail.com
+- **Location:** Cairo, Egypt
+
+---
+
+## 💼 Available for Opportunities
+
+I'm open to:
+- 📊 Data Analytics Manager roles
+- 🔬 Data Science Manager roles
+- 🎯 CX Analytics / Insights Manager roles
+- 💻 Freelance data science projects
+
+---
+
+*⭐ If you find this portfolio useful, please consider giving it a star!*
