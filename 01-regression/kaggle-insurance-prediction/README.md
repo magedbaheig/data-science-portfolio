@@ -1,73 +1,50 @@
-# 🏆 Kaggle 30 Days of ML: Insurance Claims Prediction
+🏆 Kaggle 30 Days of ML: Insurance Claims Prediction
+Top 30% Ranking | Regression with LightGBM
 
-**Top 30% Ranking | Regression with LightGBM**
+Kaggle
+Python
+LightGBM
+Status
+Ranking
 
-![Kaggle](https://img.shields.io/badge/Kaggle-Competition-blue)
-![Python](https://img.shields.io/badge/Python-3.x-blue)
-![LightGBM](https://img.shields.io/badge/LightGBM-Gradient%20Boosting-green)
-![Status](https://img.shields.io/badge/Status-Completed-success)
-![Ranking](https://img.shields.io/badge/Ranking-Top%2030%25-gold)
-
----
-
-## 📋 Project Overview
-
-| Aspect | Details |
-|--------|---------|
-| **Competition** | Kaggle 30 Days of ML |
-| **Year** | 2021 |
-| **Type** | Supervised Learning (Regression) |
-| **Objective** | Predict continuous insurance claim amounts |
-| **Ranking** | **Top 30%** (outperforming ~70% of participants) |
-
----
-
-## 🎯 Problem Statement
-
+📋 Project Overview
+Aspect	Details
+Competition	Kaggle 30 Days of ML
+Year	2021
+Type	Supervised Learning (Regression)
+Objective	Predict continuous insurance claim amounts
+Ranking	Top 30% (outperforming ~70% of participants)
+🎯 Problem Statement
 Predict a continuous target variable (insurance claim amount) based on a mix of categorical and numerical features using a synthetic dataset created with CTGAN (based on real data).
 
----
+📊 Dataset
+Metric	Value
+Training Records	300,000
+Test Records	200,000
+Total Records	500,000
+Categorical Features	10 (cat0 - cat9)
+Numerical Features	14 (cont0 - cont13)
+Target Variable	Continuous (claim amount)
+Missing Values	None
+🔧 Technical Approach
+1. Exploratory Data Analysis
+Analyzed feature distributions and correlations
+Identified low-correlation features for removal
+Examined categorical variable cardinality
+2. Feature Engineering
+Dropped low-correlation columns: cont1, cont8, cat0, cat1, cat2, cat9
+Final features used: 19 (7 categorical + 12 numerical)
+3. Categorical Encoding
+Label Encoding for all categorical variables
+Cardinality analysis (all ≤ 16 unique values)
+4. Model Selection & Training
+Model	Description
+LGBMRegressor	Final model (LightGBM gradient boosting)
+K-Fold CV	2-fold cross-validation
+Early Stopping	50 rounds
+5. Hyperparameter Configuration
+Python
 
-## 📊 Dataset
-
-| Metric | Value |
-|--------|-------|
-| Training Records | 300,000 |
-| Test Records | 200,000 |
-| Total Records | **500,000** |
-| Categorical Features | 10 (cat0 - cat9) |
-| Numerical Features | 14 (cont0 - cont13) |
-| Target Variable | Continuous (claim amount) |
-| Missing Values | None |
-
----
-
-## 🔧 Technical Approach
-
-### 1. Exploratory Data Analysis
-- Analyzed feature distributions and correlations
-- Identified low-correlation features for removal
-- Examined categorical variable cardinality
-
-### 2. Feature Engineering
-- **Dropped low-correlation columns:** `cont1`, `cont8`, `cat0`, `cat1`, `cat2`, `cat9`
-- **Final features used:** 19 (7 categorical + 12 numerical)
-
-### 3. Categorical Encoding
-- **Label Encoding** for all categorical variables
-- Cardinality analysis (all ≤ 16 unique values)
-
-### 4. Model Selection & Training
-
-| Model | Description |
-|-------|-------------|
-| **LGBMRegressor** | Final model (LightGBM gradient boosting) |
-| K-Fold CV | 2-fold cross-validation |
-| Early Stopping | 50 rounds |
-
-### 5. Hyperparameter Configuration
-
-```python
 lgbm_parameters = {
     'max_depth': 43,
     'subsample': 0.52,
@@ -135,7 +112,7 @@ Visit the competition page
 Fork this notebook
 Run all cells
 Option 2: Local
-Bash
+text
 
 pip install -r requirements.txt
 jupyter notebook 30-days-of-ml-competition.ipynb
@@ -158,7 +135,7 @@ Credit Default Risk – Classification comparison
 📜 Competition Details
 Host: Kaggle
 Duration: 30 days
-Competetitors: 8,040 Participants | 7,573 Teams | 60,288 Submissions
+Participants: 7,000+
 Evaluation: RMSE (Root Mean Squared Error)
 Dataset: Synthetic (CTGAN-generated from real data)
 👤 Author
@@ -169,4 +146,6 @@ GitHub: https://github.com/Maged-Baheig
 Kaggle: https://www.kaggle.com/magedbaheig
 Email: magedbaheig@gmail.com
 Location: Cairo, Egypt
+
+Part of the Data Science Portfolio
 
