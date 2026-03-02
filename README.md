@@ -122,8 +122,9 @@ This self-directed portfolio complements **10+ years of corporate experience** i
 ## 📫 Contact
 
 - **LinkedIn:** [https://www.linkedin.com/in/magedbaheig](https://www.linkedin.com/in/magedbaheig)
-- **GitHub:** [https://github.com/Maged-Baheig](https://github.com/Maged-Baheig)
 - **Email:** [magedbaheig@gmail.com](mailto:magedbaheig@gmail.com)
+- **GitHub:** [https://github.com/Maged-Baheig](https://github.com/Maged-Baheig)
+- **Kaggle:** [https://www.kaggle.com/magedbaheig](https://www.kaggle.com/magedbaheig)
 - **Location:** Cairo, Egypt
 
 ---
