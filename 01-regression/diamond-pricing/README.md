@@ -28,6 +28,7 @@
 |------|--------|-------------|
 | **Excel** | ✅ Complete | Regression with Data Analysis ToolPak |
 | **Alteryx** | ✅ Complete | Visual workflow (Ordinal + Categorical approaches) |
+| **KNIME** |  🔜 Planned | Open-source workflow replication |
 | **Python** | 🔜 Planned | scikit-learn implementation |
 
 ---
@@ -79,14 +80,16 @@ A jewelry company wants to bid on 3,000 diamonds at auction. The company needs t
 ### 3. Final Model Equation
 
 **Best Linear Regression Equation (Dummy Variables):**
+
 Price = -7,382.30
-+ (8,887.40 × Carat)
-+ (682.20 × cutGood) + (1,017.10 × cutIdeal) + (889.30 × cutPremium) + (867.10 × cutVery Good)
-+ (-205.20 × colorE) + (-298.70 × colorF) + (-498.60 × colorG) + (-966.20 × colorH) + (-1,441.40 × colorI) + (-2,321.40 × colorJ)
-+ (5,421.80 × clarityIF) + (3,570.60 × claritySI1) + (2,616.90 × claritySI2) + (4,534.70 × clarityVS1) + (4,217.10 × clarityVS2) + (5,057.80 × clarityVVS1) + (4,953.70 × clarityVVS2)
+ + (8,887.40 × Carat)
+ + (682.20 × cutGood) + (1,017.10 × cutIdeal) + (889.30 × cutPremium) + (867.10 × cutVery Good)
+ + (-205.20 × colorE) + (-298.70 × colorF) + (-498.60 × colorG) + (-966.20 × colorH) + (-1,441.40 × colorI) + (-2,321.40 × colorJ)
+ + (5,421.80 × clarityIF) + (3,570.60 × claritySI1) + (2,616.90 × claritySI2) + (4,534.70 × clarityVS1) + (4,217.10 × clarityVS2) + (5,057.80 × clarityVVS1) + (4,953.70 × clarityVVS2)
 
 
 **Simplified Model (Course Provided):**
+
 Price = -5,269 + 8,413 × Carat + 158.1 × Cut + 454 × Clarity
 
 
