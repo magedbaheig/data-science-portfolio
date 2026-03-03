@@ -217,4 +217,4 @@ Pawdacity, a leading pet store chain in Wyoming with **13 stores**, wants to exp
 
 ---
 
-*Part of the [Data Science Portfolio](../../)*
+*Part of the [Data Science Portfolio](https://github.com/Maged-Baheig/data-science-portfolio/tree/main)*
