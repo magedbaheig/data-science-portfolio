@@ -191,5 +191,5 @@ A mail-order catalog company that manufactures and sells high-end home goods nee
 
 ---
 
-*Part of the [Data Science Portfolio](../../)*
+*Part of the [Data Science Portfolio](https://github.com/Maged-Baheig/data-science-portfolio/tree/main)*
 
