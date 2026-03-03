@@ -46,6 +46,27 @@ This portfolio contains **12 end-to-end data science projects** demonstrating ha
 | [School Cost](./01-regression/school-cost-prediction/) | Data Prep + Regression | Messy dataset | Clean dataset |
 | [Pet Store Sales](./01-regression/pet-store-sales/) | Data Prep + Regression | Messy dataset | Location recommendation |
 
+### 1️⃣ Regression (5 Projects)
+
+#### 🐍 Python-Based
+| Project | Techniques | Scale | Results |
+|---------|------------|-------|---------|
+| [Insurance Claims (Kaggle)](./01-regression/kaggle-insurance-prediction/) | XGBoost, LightGBM | 500K records | **Top 30%**, RMSE 0.725 |
+
+#### 📊 Excel/Alteryx-Based
+| Project | Techniques | Scale | Results |
+|---------|------------|-------|---------|
+| [Diamond Pricing](./01-regression/diamond-pricing/) | Linear Regression | 5K records | R² 0.92, $8.2M bid |
+| [Catalog Demand](./01-regression/catalog-demand/) | Linear Regression | 2.3K records | $21,987 profit |
+
+#### 🔧 Data Preparation for Regression
+| Project | Focus | Scale | Results |
+|---------|-------|-------|---------|
+| [School Cost Prediction](./01-regression/school-cost-prediction/) | Data Cleaning | Messy dataset | Regression-ready dataset |
+| [Pet Store Sales](./01-regression/pet-store-sales/) | Outlier Analysis | 11 cities | R² 0.82 predictors identified |
+
+
+
 ### 2️⃣ Classification (2 Projects)
 
 | Project | Techniques | Results |
