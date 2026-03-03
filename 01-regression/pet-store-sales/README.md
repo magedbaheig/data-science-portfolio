@@ -180,8 +180,8 @@ Pawdacity, a leading pet store chain in Wyoming with **13 stores**, wants to exp
 | File | Description |
 |------|-------------|
 | README.md | This documentation file |
-| Pawdacity_Report_1st Submission_Maged.pdf | Detailed analysis report |
-| Pawdacity_Analytical Dataset Project_Maged_1st_Submission.yxmd | Alteryx workflow |
+| Pawdacity_Report_Submission_Maged.pdf | Detailed analysis report |
+| Pawdacity_Analytical Dataset Project_Maged_Submission.yxmd | Alteryx workflow |
 | Sales_Avg_Vs_Med_All Scenarios.xlsx | Outlier scenario comparison |
 
 ---
