@@ -152,8 +152,8 @@ A mail-order catalog company that manufactures and sells high-end home goods nee
 | File | Description |
 |------|-------------|
 | README.md | This documentation file |
-| Catalog_Report_1st Submission_Maged.pdf | Detailed analysis report |
-| Catalog_AlteryxSolution_1st Submission_Maged.yxmd | Alteryx visual workflow |
+| Catalog_Report_Submission_Maged.pdf | Detailed analysis report |
+| Catalog_AlteryxSolution_Submission_Maged.yxmd | Alteryx visual workflow |
 
 ---
 
