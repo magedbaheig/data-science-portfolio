@@ -5,6 +5,7 @@
 ![Excel](https://img.shields.io/badge/Excel-Regression-green)
 ![Alteryx](https://img.shields.io/badge/Alteryx-Workflow-orange)
 ![Python](https://img.shields.io/badge/Python-Planned-lightgrey)
+![KNIME](https://img.shields.io/badge/KNIME-Planned-lightgrey)
 ![Status](https://img.shields.io/badge/Status-Completed-success)
 ![Udacity](https://img.shields.io/badge/Udacity-Meets%20Specifications-brightgreen)
 
