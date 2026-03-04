@@ -3,6 +3,8 @@
 **Time Series Analysis: ETS vs ARIMA Model Comparison**
 
 ![Alteryx](https://img.shields.io/badge/Alteryx-Workflow-orange)
+![Python](https://img.shields.io/badge/Python-Planned-lightgrey)
+![KNIME](https://img.shields.io/badge/KNIME-Planned-lightgrey)
 ![Status](https://img.shields.io/badge/Status-Completed-success)
 ![Course](https://img.shields.io/badge/Udacity-Predictive%20Analytics%20for%20Business-blueviolet)
 
