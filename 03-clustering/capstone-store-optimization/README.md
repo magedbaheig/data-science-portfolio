@@ -1,11 +1,12 @@
 # 🏪 Predictive Analytics Capstone: Store Format Optimization & Sales Forecasting
 
-**End-to-End Pipeline: Clustering → Classification → Time Series Forecasting**
+**End-to-End Retail Analytics: Clustering → Classification → Time Series Forecasting**
 
 ![Alteryx](https://img.shields.io/badge/Alteryx-Workflow-orange)
 ![Tableau](https://img.shields.io/badge/Tableau-Visualization-blue)
+![Excel](https://img.shields.io/badge/Excel-Analysis-green)
 ![Status](https://img.shields.io/badge/Status-Completed-success)
-![Udacity](https://img.shields.io/badge/Udacity-Capstone-brightgreen)
+![Course](https://img.shields.io/badge/Udacity-Predictive%20Analytics%20for%20Business-blueviolet)
 
 ---
 
@@ -13,172 +14,38 @@
 
 | Aspect | Details |
 |--------|---------|
-| **Course** | Udacity Predictive Analytics for Business (Bertelsmann) |
+| **Course** | Udacity Predictive Analytics for Business Nanodegree (Bertelsmann Scholarship) |
 | **Year** | 2021 |
-| **Type** | Capstone Project (Clustering + Classification + Time Series) |
-| **Objective** | Optimize store formats for existing stores, classify new stores, and forecast produce sales |
-| **Review** | ✅ Meets Specifications |
+| **Type** | Capstone — Multi-method end-to-end retail analytics |
+| **Tasks** | Clustering → Classification → Time Series Forecasting |
+| **Tools** | Alteryx, Tableau, Excel |
+| **Scope** | 85 existing stores + 10 new stores; multi-year daily sales data |
 
 ---
 
-## 🎯 Business Problem
+## 🎯 Business Problem & Objective
 
-A grocery chain needs to:
-1. **Segment 85 existing stores** into optimal format categories based on sales patterns
-2. **Classify 10 new stores** into the most appropriate format
-3. **Forecast produce sales** for inventory and supply chain planning
+A retail grocery chain needed to solve **three interconnected business problems**:
 
----
+| Task | Business Question | Method |
+|------|-------------------|--------|
+| **Task 1** | What are the natural store formats among existing stores? | Unsupervised Clustering |
+| **Task 2** | Which format should each new store be assigned to? | Supervised Classification |
+| **Task 3** | What are the produce sales forecasts for all stores? | Time Series Forecasting |
 
-## 🛠️ Technical Pipeline
-
-| Task | Method | Outcome |
-|------|--------|---------|
-| **Task 1: Clustering** | K-Means (3 Clusters) | 85 stores segmented into 3 formats |
-| **Task 2: Classification** | Boosted Model | 10 new stores classified (76% accuracy) |
-| **Task 3: Forecasting** | ETS(M,N,M) | Produce sales forecast with 80%/95% CI |
+The analysis follows an end-to-end decision pipeline: **segment → classify → forecast** — translating model outputs into concrete business recommendations.
 
 ---
 
-## 📊 Task 1: Store Format Clustering
+## 🔄 End-to-End Pipeline
 
-### Clustering Model Comparison
+| Stage | Method | Input | Output |
+|-------|--------|-------|--------|
+| **Stage 1** | K-Means Clustering | 85 existing stores | 3 store formats identified |
+| **Stage 2** | Boosted Classification | 10 new stores | Format assignment per store |
+| **Stage 3** | ETS(M,N,M) Forecasting | All stores by cluster | Produce sales forecast with CI |
 
-| Model | Clusters | Rand Index | CH Index | Selected |
-|-------|----------|------------|----------|----------|
-| K-Means | 3 | Tight | Tight | ✅ Best |
-| K-Medians | 3 | Good | Good | ❌ |
-| Neural Gas | 3 | Higher Mean | Better Compactness | ❌ (per Udacity guidance) |
-
-### Optimal Cluster Selection
-
-| Metric | Decision Rationale |
-|--------|---------------------|
-| **K-Centroids Diagnostics** | Box-whisker plots show tight indices at 3 clusters |
-| **Rand Index** | Compact spread for 3-cluster solution |
-| **CH Index** | Calinski-Harabasz validates 3-cluster optimality |
-
-### Store Format Distribution
-
-| Format | Store Count | Key Characteristic |
-|--------|-------------|-------------------|
-| **Format 1** | 25 stores | Lowest Floral & Produce sales |
-| **Format 2** | 35 stores | Highest Floral sales |
-| **Format 3** | 25 stores | Highest General Merchandise sales |
-
-### Cluster Differentiation
-
-| Category | Format 1 | Format 2 | Format 3 |
-|----------|----------|----------|----------|
-| **Floral** | Lowest | Highest | Medium |
-| **General Merchandise** | Medium | Medium | Highest |
-| **Produce** | Lowest | Higher | Higher |
-
----
-
-## 🎯 Task 2: New Store Classification
-
-### Classification Model Comparison
-
-| Metric | Decision Tree | Forest Model | Boosted Model |
-|--------|---------------|--------------|---------------|
-| **Overall Accuracy** | 65.0% | 71.0% | **76.0%** ✅ |
-| **F1 Score** | 67.0% | 75.0% | **83.0%** ✅ |
-| **Error Rate** | 33.0% | 25.0% | **17.0%** ✅ |
-| **Precision Avg** | 66.0% | 70.0% | **79.0%** ✅ |
-| **Recall Avg** | 67.0% | 75.0% | **83.0%** ✅ |
-
-### Top 3 Predictive Variables
-
-| Rank | Variable | Description |
-|------|----------|-------------|
-| 1 | **Age0to9** | Population age 0-9 in area |
-| 2 | **Hval750Kplus** | Home values $750K+ |
-| 3 | **Age65Plus** | Population age 65+ in area |
-
-### New Store Classifications
-
-| Store | Predicted Format |
-|-------|------------------|
-| S0086 | Format 1 |
-| S0087 | Format 2 |
-| S0088 | Format 3 |
-| S0089 | Format 2 |
-| S0090 | Format 2 |
-| S0091 | Format 3 |
-| S0092 | Format 2 |
-| S0093 | Format 3 |
-| S0094 | Format 2 |
-| S0095 | Format 2 |
-
-### Boosted Model Performance by Cluster
-
-| Metric | Cluster 1 | Cluster 2 | Cluster 3 |
-|--------|-----------|-----------|-----------|
-| **Precision** | 100.0% | 71.0% | 67.0% |
-| **Recall** | 50.0% | 100.0% | 100.0% |
-| **Error Rate** | 50.0% | 0.0% | 0.0% |
-
----
-
-## 📈 Task 3: Time Series Forecasting
-
-### Time Series Analysis
-
-| Component | Analysis | Method |
-|-----------|----------|--------|
-| **Error** | Growing over time | Multiplicative (M) |
-| **Trend** | Horizontal/Stationary | None (N) |
-| **Seasonality** | Shrinking slightly over time | Multiplicative (M) |
-
-### Final Model: ETS(M,N,M)
-
-| Metric | ETS(M,N,M) | ETS(M,Ad,M) | ARIMA(0,1,1)(0,1,1)[12] |
-|--------|------------|-------------|-------------------------|
-| **RMSE** | 969,000 | Higher | 935,000 |
-| **MASE** | 0.44 | Higher | 0.35 |
-| **AIC** | 1,279 | Higher | 849 |
-| **Selected** | ✅ Best | ❌ | ❌ |
-
-### Model Selection Rationale
-
-| Criterion | Decision |
-|-----------|----------|
-| **Holdout Sample Validation** | ETS outperforms ARIMA on holdout |
-| **MASE < 1.00** | Both models pass threshold |
-| **Forecast Stability** | ETS more stable on validation |
-
-### ARIMA Model Development
-
-| Step | ACF/PACF Observation | Action |
-|------|---------------------|--------|
-| Initial Series | Slowly decaying correlations | Seasonal differencing needed |
-| Seasonal Difference | Still correlated | First difference needed |
-| Seasonal First Difference | Most lags removed | d=1, D=1 established |
-| Final Model | MA(1) + Seasonal MA(1) | ARIMA(0,1,1)(0,1,1)[12] |
-
-### Forecast Output
-
-| Forecast Type | Confidence Intervals |
-|---------------|---------------------|
-| **Existing Stores** | 80% and 95% CI |
-| **New Stores** | 80% and 95% CI |
-
----
-
-## 🔧 Technical Approach Summary
-
-### End-to-End Pipeline
-
-┌─────────────────┐ ┌─────────────────┐ ┌─────────────────┐
-│ CLUSTERING │ → │ CLASSIFICATION │ → │ FORECASTING │
-│ (K-Means) │ │ (Boosted Model) │ │ (ETS M,N,M) │
-└─────────────────┘ └─────────────────┘ └─────────────────┘
-│ │ │
-▼ ▼ ▼
-85 Stores → 10 New Stores → Produce Sales
-3 Formats Format Assignment Forecast
-
+**Pipeline Flow:** Clustering Outputs → Classification Labels → Forecast Groups
 
 ### Validation Strategy
 
@@ -192,65 +59,238 @@ A grocery chain needs to:
 
 ## 📁 Project Structure
 
-predictive-analytics-capstone/
-├── README.md
-├── data/
-│ ├── store_data.csv
-│ ├── new_stores.csv
-│ └── produce_sales.csv
-├── workflows/
-│ ├── Task1_Clustering.yxmd
-│ ├── Task2_Classification.yxmd
-│ └── Task3_TimeSeries.yxmd
-├── visualizations/
-│ └── Store_Locations_Tableau.twbx
-├── reports/
-│ └── Capstone_Report.pdf
-└── submission/
-└── Udacity_Review.pdf
-
+| Folder/File | Description |
+|-------------|-------------|
+| `README.md` | This documentation file |
+| `task1-store-formats/` | Clustering workflows and Tableau map |
+| `task1-store-formats/clustering-workflow.yxmd` | Alteryx: K-Means, K-Medians, Neural Gas |
+| `task1-store-formats/store-map-tableau.twbx` | Tableau: store locations by cluster + sales |
+| `task2-new-store-classification/` | Classification workflows |
+| `task2-new-store-classification/classification-workflow.yxmd` | Alteryx: Decision Tree, Forest, Boosted |
+| `task3-produce-forecasting/` | Time series workflows and visualizations |
+| `task3-produce-forecasting/forecasting-workflow.yxmd` | Alteryx: ETS and ARIMA models |
+| `task3-produce-forecasting/forecast-visualization.twbx` | Tableau: historical + forecast chart |
+| `Capstone_Report_MagedBaheig.pdf` | Full submission report |
 
 ---
 
-## 📊 Visualizations
+## 🔧 Task 1: Determine Store Formats for Existing Stores
 
-### Tableau Dashboard Components
+### Objective
 
-| Visualization | Purpose |
-|---------------|---------|
-| **Store Location Map** | Geographic distribution with cluster colors |
-| **Cluster by Total Sales** | Size encoding for sales volume |
-| **Sales by Category** | Format differentiation analysis |
+Identify the optimal number of natural store formats using clustering on 85 existing stores.
 
-### Time Series Plots
+### Methodology
 
-| Plot | Purpose |
-|------|---------|
-| **Decomposition Plot** | Error, Trend, Seasonality identification |
-| **ACF/PACF** | ARIMA parameter determination |
-| **Forecast Plot** | Historical + Predicted with CI bands |
+**Step 1 — Model Comparison via K-Centroids Diagnostics (Alteryx)**
+
+Three clustering algorithms were evaluated:
+
+| Algorithm | Evaluated | Final Selection |
+|-----------|-----------|-----------------|
+| K-Means | ✅ | ✅ Selected (per Udacity guidance) |
+| K-Medians | ✅ | — |
+| Neural Gas | ✅ | Note: Outperformed at Cluster 3 (CH Index) |
+
+**Analyst Note:** Neural Gas demonstrated superior CH Index performance at 3 clusters (higher mean/median, lower range/IQR). K-Means was used per course guidance. In a production context, Neural Gas would be the recommended choice.
+
+**Step 2 — Optimal Cluster Count**
+
+Using Rand Index and Calinski-Harabasz (CH) Index box-whisker plots:
+
+| Metric | Signal |
+|--------|--------|
+| Rand Index | Tight distribution at k=3 |
+| CH Index | Clear separation at k=3 |
+| **Decision** | **3 clusters (store formats)** |
+
+### Results
+
+**Store Distribution per Format:**
+
+| Store Format | Number of Stores | Profile Highlight |
+|--------------|------------------|-------------------|
+| Format 1 | 25 stores | Lowest Produce and Floral sales |
+| Format 2 | 35 stores | Highest Floral sales |
+| Format 3 | 25 stores | Highest General Merchandise sales |
+
+**Key Cluster Differentiators (by sales category):**
+
+| Category | Winner | Loser |
+|----------|--------|-------|
+| Floral | Format 2 (highest) | Format 1 (lowest) |
+| General Merchandise | Format 3 (highest) | — |
+| Produce | Format 2 and 3 (higher) | Format 1 (lowest) |
+
+**Tableau Visualization:** Store locations mapped by cluster (color) and total sales (size).
 
 ---
 
-## 💡 Key Learnings
+## 🔧 Task 2: Predict Store Formats for 10 New Stores
 
-| Learning | Details |
-|----------|---------|
-| **Model Comparison** | Systematic evaluation across 3 clustering + 3 classification + 6 time series models |
-| **Validation Rigor** | Multiple validation strategies for each task type |
-| **End-to-End Pipeline** | Integration of unsupervised → supervised → forecasting |
-| **Business Translation** | Each task directly supports operational decisions |
-| **Tool Integration** | Alteryx workflows + Tableau visualizations |
+### Objective
+
+Use supervised classification to assign each of 10 new stores to the optimal format identified in Task 1.
+
+### Methodology
+
+**Problem Type:** Multi-class classification (3 categories: Format 1, 2, 3)
+
+**Models Evaluated** (20% validation split, Random Seed = 3):
+
+| Measure | Decision Tree | Forest | Boosted Model |
+|---------|---------------|--------|---------------|
+| Overall Accuracy | 65.0% | 71.0% | **76.0%** |
+| F1 Score | 67.0% | 75.0% | **83.0%** |
+| Error Rate Avg | 33.0% | 25.0% | **17.0%** |
+| Precision Avg | 66.0% | 70.0% | **79.0%** |
+| Recall Avg | 67.0% | 75.0% | **83.0%** |
+
+**Selected Model:** Boosted Model — outperformed on all 5 evaluation criteria.
+
+**Top 3 Predictor Variables:**
+
+| Rank | Variable | Relevance |
+|------|----------|-----------|
+| 1 | Age0to9 | Young families — produce/floral preference |
+| 2 | Hval750Kplus | High-value homes — premium product mix |
+| 3 | Age65Plus | Senior demographics — format behavior patterns |
+
+**Boosted Model Performance by Cluster:**
+
+| Metric | Cluster 1 | Cluster 2 | Cluster 3 |
+|--------|-----------|-----------|-----------|
+| Precision | 100.0% | 71.0% | 67.0% |
+| Recall | 50.0% | 100.0% | 100.0% |
+| Error Rate | 50.0% | 0.0% | 0.0% |
+
+### New Store Assignments
+
+| Store | Assigned Format |
+|-------|-----------------|
+| S0086 | Format 1 |
+| S0087 | Format 2 |
+| S0088 | Format 3 |
+| S0089 | Format 2 |
+| S0090 | Format 2 |
+| S0091 | Format 3 |
+| S0092 | Format 2 |
+| S0093 | Format 3 |
+| S0094 | Format 2 |
+| S0095 | Format 2 |
+
+**New Store Summary:** 1 x Format 1 — 6 x Format 2 — 3 x Format 3
+
+---
+
+## 🔧 Task 3: Predict Produce Sales (ETS Time Series Forecasting)
+
+### Objective
+
+Forecast monthly produce sales for existing stores and new stores (by cluster average).
+
+### Data Preparation
+
+**Existing Stores:**
+
+| Step | Action |
+|------|--------|
+| 1 | Aggregated daily store-level data to Monthly Produce Total Sales |
+| 2 | Group by: Year, Month then Sum(Produce) |
+| 3 | 6-month holdout sample (2015-07 to 2015-12) for model validation |
+
+**New Stores:**
+
+| Step | Action |
+|------|--------|
+| 1 | Aggregated to cluster-level monthly averages |
+| 2 | Group by: Store, Cluster, Year, Month then Sum(Produce) |
+| 3 | Then Avg by Cluster, scaled by store count per cluster |
+
+### Time Series Decomposition
+
+| Component | Observed Pattern | Treatment |
+|-----------|------------------|-----------|
+| **Error** | Growing over time | Multiplicative **(M)** |
+| **Trend** | Stationary / horizontal | None **(N)** |
+| **Seasonality** | Shrinking peaks (Jul highs / Sep-Oct valleys) | Multiplicative **(M)** |
+
+**Final Model:** ETS(M, N, M)
+
+### Model Comparison
+
+**ETS Models Evaluated:**
+
+| Model | MASE | AIC | Notes |
+|-------|------|-----|-------|
+| ETS(M, N, M) | 0.44 | 1,279 | Selected — best holdout; matches Auto |
+| ETS(M, Ad, M) | Higher | Higher | Dampened parameter variant |
+| ETS(Auto) | — | — | Confirmed (M, N, M) selection |
+
+**ARIMA Models Evaluated:**
+
+| Model | MASE | AIC | Notes |
+|-------|------|-----|-------|
+| ARIMA(0,1,1)(0,1,1)12 | 0.35 | 849 | Strong in-sample; weaker holdout |
+| ARIMA(0,1,1)(0,2,1)12 | — | 504 | Better AIC but overfitting on holdout |
+| ARIMA Auto (1,0,0)(1,1,0)12 | — | — | Auto-selected; not optimal |
+
+**Final Decision — ETS vs ARIMA (Holdout Sample):**
+
+| Metric | ETS(M,N,M) | ARIMA(0,1,1)(0,1,1)12 | Winner |
+|--------|------------|------------------------|--------|
+| Holdout RMSE | Better | Higher | ETS |
+| Holdout MASE | Better | Higher | ETS |
+| Holdout MAPE | Better | — | ETS |
+| Overfitting Risk | Low | Low-Moderate | ETS |
+
+**ETS(M, N, M) selected for all forecasts** (existing + new stores).
+
+### Forecast Output
+
+Forecasts produced with **80% and 95% confidence intervals** for:
+
+- All existing stores (aggregate monthly produce sales)
+- Each new store cluster scaled by store count and summed for total new store forecast
 
 ---
 
 ## 📈 Results Summary
 
-| Task | Key Outcome | Business Impact |
-|------|-------------|-----------------|
-| **Clustering** | 3 optimal formats identified | Store categorization framework |
-| **Classification** | 76% accuracy on new stores | Confident format assignment |
-| **Forecasting** | ETS(M,N,M) with 80%/95% CI | Inventory planning support |
+| Task | Method | Key Outcome |
+|------|--------|-------------|
+| **Clustering** | K-Means (3 clusters) | 85 stores segmented into 3 formats (25/35/25 split) |
+| **Classification** | Boosted Model | 76% accuracy, 83% F1, 10 new stores assigned |
+| **Forecasting** | ETS(M,N,M) | MASE 0.44, 80%/95% CI forecasts |
+
+**Models Evaluated:** 3 clustering + 3 classification + 6 time series = **12 total models benchmarked**
+
+---
+
+## 💡 Key Learnings
+
+| Learning | Detail |
+|----------|--------|
+| **Pipeline Thinking** | Clustering outputs become classification labels; classification outputs determine forecast groups — true end-to-end design |
+| **Algorithm Benchmarking** | Neural Gas outperformed K-Means for CH Index at k=3; production recommendation would differ from course guidance |
+| **Overfitting vs AIC Trade-off** | ARIMA(0,1,1)(0,2,1)12 had better AIC but overfit the holdout — real-world validation matters more than in-sample fit |
+| **Holdout Over In-Sample** | Final model selection based on holdout performance, not in-sample errors alone |
+| **Business Framing** | Each task translated directly into a business action: format assignment, merchandising strategy, inventory planning |
+
+---
+
+## 🛠️ Tools & Techniques
+
+| Category | Details |
+|----------|---------|
+| **Platform** | Alteryx Designer |
+| **Visualization** | Tableau Public |
+| **Clustering** | K-Means, K-Medians, Neural Gas |
+| **Cluster Validation** | Rand Index, Calinski-Harabasz (CH) Index |
+| **Classification** | Decision Tree, Random Forest, Gradient Boosted Model |
+| **Time Series** | ETS(M,N,M), ARIMA(0,1,1)(0,1,1)12 |
+| **TS Analysis** | ACF/PACF, Decomposition (Error/Trend/Seasonality) |
+| **Validation Metrics** | F1 Score, Precision, Recall, Accuracy, RMSE, MASE, AIC |
 
 ---
 
@@ -258,9 +298,10 @@ predictive-analytics-capstone/
 
 | Project | Type | Link |
 |---------|------|------|
-| Customer Segmentation (Arvato) | Clustering + PCA | [Link](../arvato-customer-segmentation/) |
-| Diamond Price Prediction | Regression | [Link](../diamond-price-prediction/) |
-| Video Game Demand Forecasting | Time Series | [Link](../video-game-forecasting/) |
+| Country Segmentation | Clustering (PCA + Neural Gas) | [Link](../country-segmentation/) |
+| Credit Default Risk | Classification (RF, GBM) | [Link](../../02-classification/credit-default-risk/) |
+| Video Game Forecasting | Time Series (ETS/ARIMA) | [Link](../../04-time-series/video-game-forecasting/) |
+| Insurance Prediction (Kaggle) | Regression (LightGBM) | [Link](../../01-regression/insurance-claims-kaggle/) |
 
 ---
 
@@ -268,7 +309,7 @@ predictive-analytics-capstone/
 
 | Entity | Contribution |
 |--------|--------------|
-| **Udacity** | Predictive Analytics for Business Nanodegree |
+| **Udacity** | Predictive Analytics for Business Nanodegree program |
 | **Bertelsmann** | Scholarship sponsorship |
 
 ---
@@ -279,13 +320,13 @@ predictive-analytics-capstone/
 
 | Platform | Link |
 |----------|------|
-| LinkedIn | [Connect](https://www.linkedin.com/in/magedbaheig) |
-| Kaggle | [Profile](https://www.kaggle.com/magedbaheig) |
-| GitHub | [Follow](https://github.com/Maged-Baheig) |
-| Email | [Reach Out](mailto:magedbaheig@gmail.com) |
+| LinkedIn | [magedbaheig](https://www.linkedin.com/in/magedbaheig) |
+| Kaggle | [magedbaheig](https://www.kaggle.com/magedbaheig) |
+| GitHub | [Maged-Baheig](https://github.com/Maged-Baheig) |
+| Email | magedbaheig@gmail.com |
 
-📍 **Location:** Cairo, Egypt
+📍 Cairo, Egypt
 
 ---
 
-*Part of the [Data Science Portfolio](https://github.com/Maged-Baheig/data-science-portfolio/tree/main)*
+*Part of the [Data Science & ML Portfolio](https://github.com/Maged-Baheig/data-science-portfolio)*
