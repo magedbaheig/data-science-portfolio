@@ -181,7 +181,7 @@ Countries in the same cluster as USA are recommended for expansion priority, bas
 
 | Project | Type | Link |
 |---------|------|------|
-| Capstone: Store Optimization | Clustering + Classification + Time Series | [Link](../capstone-store-optimization/) |
+| Capstone: Store Format Optimization | Clustering + Classification + Time Series | [Link](../../00-capstone-projects/store-format-optimization/) |
 | Credit Default Risk | Classification | [Link](../../02-classification/credit-default-risk/) |
 | Pet Store Sales (Pawdacity) | Data Prep + Predictor Selection | [Link](../../01-regression/pet-store-sales/) |
 
