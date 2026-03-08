@@ -214,7 +214,7 @@ Freelance Data Science Trainer | 30+ programs, 540+ hours, 250+ professionals, 9
 |----------|------|
 | LinkedIn | [Connect](https://www.linkedin.com/in/magedbaheig) |
 | Kaggle | [Profile](https://www.kaggle.com/magedbaheig) |
-| GitHub | [Follow](https://github.com/Maged-Baheig) |
+| GitHub | [Follow](https://github.com/magedbaheig) |
 | Email | [Reach Out](mailto:magedbaheig@gmail.com) |
 
 📍 **Location:** Cairo, Egypt
