@@ -274,11 +274,11 @@ Two outlier control stores removed based on AvgMonthSales and AvgMonthTrafficCou
 |----------|------|
 | LinkedIn | [magedbaheig](https://www.linkedin.com/in/magedbaheig) |
 | Kaggle | [magedbaheig](https://www.kaggle.com/magedbaheig) |
-| GitHub | [Maged-Baheig](https://github.com/Maged-Baheig) |
+| GitHub | [magedbaheig](https://github.com/magedbaheig) |
 | Email | magedbaheig@gmail.com |
 
 📍 Cairo, Egypt
 
 ---
 
-*Part of the [Data Science & ML Portfolio](https://github.com/Maged-Baheig/data-science-portfolio)*
+*Part of the [Data Science & ML Portfolio](https://github.com/magedbaheig/data-science-portfolio)*
