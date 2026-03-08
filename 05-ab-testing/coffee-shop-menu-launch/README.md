@@ -272,10 +272,10 @@ Two outlier control stores removed based on AvgMonthSales and AvgMonthTrafficCou
 
 | Platform | Link |
 |----------|------|
-| LinkedIn | [magedbaheig](https://www.linkedin.com/in/magedbaheig) |
-| Kaggle | [magedbaheig](https://www.kaggle.com/magedbaheig) |
-| GitHub | [magedbaheig](https://github.com/magedbaheig) |
-| Email | magedbaheig@gmail.com |
+| LinkedIn | [Connect](https://www.linkedin.com/in/magedbaheig) |
+| Kaggle | [Profile](https://www.kaggle.com/magedbaheig) |
+| GitHub | [Follow](https://github.com/magedbaheig) |
+| Email | [Reach Out](mailto:magedbaheig@gmail.com) |
 
 📍 Cairo, Egypt
 
