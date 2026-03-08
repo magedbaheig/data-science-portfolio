@@ -214,11 +214,11 @@ Pawdacity, a leading pet store chain in Wyoming with **13 stores**, wants to exp
 |----------|------|
 | LinkedIn | [Connect](https://www.linkedin.com/in/magedbaheig) |
 | Kaggle | [Profile](https://www.kaggle.com/magedbaheig) |
-| GitHub | [Follow](https://github.com/Maged-Baheig) |
+| GitHub | [Follow](https://github.com/magedbaheig) |
 | Email | [Reach Out](mailto:magedbaheig@gmail.com) |
 
 📍 **Location:** Cairo, Egypt
 
 ---
 
-*Part of the [Data Science Portfolio](https://github.com/Maged-Baheig/data-science-portfolio/tree/main)*
+*Part of the [Data Science Portfolio](https://github.com/magedbaheig/data-science-portfolio/tree/main)*
